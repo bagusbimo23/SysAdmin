@@ -1,239 +1,186 @@
-**LAPORAN WORKSHOP ADMINISTRASI JARINGAN** 
+<div align="center">
+  <h1 style="text-align: center;font-weight: bold">LAPORAN WORKSHOP ADMINISTRASI JARINGAN<br>Tugas 2</h1>
+  <h4 style="text-align: center;">Dosen Pengampu : Dr. Ferry Astika Saputra, S.T., M.Sc.</h4>
+</div>
+<br />
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/id/4/44/Logo_PENS.png" alt="Logo PENS">
+  <h3 style="text-align: center;">Disusun Oleh : <br>Kelompok 3</h3>
+  <p style="text-align: center;">
+    <strong>Mahendra Khibrah Rabbani Sayyid (3122500013)</strong><br>
+    <strong>Akmal Zidani Fikri (3122500019)</strong><br>
+    <strong>Bagus Bimo Prakoso (3122500028)</strong>
+  </p>
 
-**“SysAdmin”** 
+<h3 style="text-align: center;line-height: 1.5">Politeknik Elektronika Negeri Surabaya<br>Departemen Teknik Informatika Dan Komputer<br>Program Studi Teknik Informatika<br>2023/2024</h3>
+<hr>
+<hr>
+</div>
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.001.png)
+## 1. Tulis kembali dalam bahasa Indonesia dengan gaya tulisanmu sendiri tentang standar struktur direktori dari Debian (Gunakan referensi https://www.debianadmin.com/linux-directory-structure-overview.html)! Gambarkan struktur direktori dari hasil instalasimu ! (gambar bisa menggunakan Miro, draw.io atau lainnya)
 
-Disusun Oleh: 
+### Penulisan Struktur Direktori pada Linux
 
-Mahendra Khibrah (3122500013) Akmal Zidani (3122500019) 
+Perbedaan yang paling gampang dicermati adalah pada Formatnya. Bukan hanya formatnya saja, tapi juga logic untuk mencari direktori juga berbeda.
 
-Bagus Bimo Prakoso (3122500028) 
+Format akses suatu direktori pada Windows : `D:\Folder\subfolder\file.txt`
 
-Dosen Pengampu: 
+Jika pada linux : `/Folder/subfolder/file.txt`
 
-Dr. Ferry Astika Saputra ST, M.Sc 
+Pada Windows memakai backslash '\', sedangkan Linux memakai slash '/'
+Pada Windows struktur direktori terdapat drive name (C:, D:, dll.), sedangkan di linux tidak terdapat drive name melainkan melalui root partition dan semua file, folder, device, dan drive berada di bawah root dan untuk mengakses kebawah root menggunakan '\'
 
-**DEPARTEMEN TEKNIK INFORMATIKA DAN KOMPUTER JURUSAN TEKNIK INFORMATIKA POLITEKNIK          ELEKTRONIKA NEGERI SURABAYA** 
+Perlu digaris bawahi dalam Linux untuk mengarahkan ke suatu direktori huruf kapital tidaknya itu harus sesuai, karena Linux itu case-sensitive.
 
-**1.  Buatlah tulisan tentang langkah-langkah instalasi sistem operasi Debian. Anda bisa menggunakan aplikasi virtualisasi seperti VirtualBox, VMWare Player, Vmware Fusion (MAC), dls. Kebutuhan sistem adalah sebagai berikut :** 
+Contoh :
+`/Folder/subfolder/file.txt` itu tidak sama dengan `/folder/subfolder/file.txt`
 
-- **CPU : 2 core** 
-- **RAM : 4096 (min)** 
-- **HDD : 25 GB dengan partisi :** 
-- **/ : 20 GB** 
-- **/storage : 5 GB** 
-- **swap : 1,5 GB** 
-- **Hostname : SysAdmin-NRP** 
-1. Buka Virtual Machine VirtualBox, lalu klik New untuk instalasi OS Baru Debian 
+Jadi linux menganggap hanya dengan satu karakter huruf yang berbeda merupakan direktori yang berbeda juga karena sifatnya yang case-sensitive.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.002.png)
+Struktur Direktori pada Unix dan Linux merupakan tergabung jadi satu Struktur direktori, dimana semua direktori terhubung menjadi satu dibawah '/' Root file system. Terlepas dimanakah file system secara fisik dipasang, semua direktori disusun secara terstruktur hierarkis dibawah Root file system.
 
-2. Lalu Isikan nama Virtual Machine dan masukkan ISO OS Debian. NOTE : Check box Skip Unattended Installation agar setting OS dan partition langsung di dalam GUI OS-nya
+Semua aturan hierarki tadi mengikuti acuan dari "Filesystem Hierarchy Structure (FHS) yang disusun oleh Free Standards Group, meskipun sebagian distribusi besar terkadang menyimpang dari standar
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.003.jpeg)
+#### Root Directory (`/`)
 
-3. Atur Base Memory, Core Processors, Size Hard Disk sesuai ketentuan 
+Struktur direktori dimulai dari Root file system (`/`) yang merupakan titik awal untuk semua struktur. Ini adalah tempat di mana semua direktori terhubung.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.004.jpeg)
+#### `/boot`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.005.jpeg)
+Berisi file-file Boot Loader seperti Grub atau Lilo, Kernel, initrd, dan konfigurasi file system.map.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.006.jpeg)
+#### `/sys`
 
-4. Pilih Graphical Install, lalu ikuti langkah-langkah sesuai gambar dibawah 
+Berisi kernel, firmware, dan file-file yang terkait dengan sistem.
 
-   ini![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.007.jpeg)
+#### `/sbin`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.008.jpeg)
+Berisi Binary Sistem yang esensial dan alat-alat Administrasi Sistem yang penting untuk operasi dan performa sistem.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.009.jpeg)
+#### `/bin`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.010.jpeg)
+Berisi binary penting untuk pengguna dan utilitas yang diperlukan dalam mode single user. Contohnya termasuk `cat`, `ls`, `cp`, dll.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.011.jpeg)
+#### `/lib`
 
-5. Hostname sesuaikan dengan ketentuan, lalu kosongi domain, isi nama user, root, dan password sesuai keinginan
+Berisi file-file pustaka yang diperlukan oleh semua binary yang berada di dalam direktori `/sbin` & `/bin`.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.012.jpeg)
+#### `/dev`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.013.jpeg)
+Berisi file sistem dan driver yang esensial.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.014.jpeg)
+#### `/etc`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.015.jpeg)
+Berisi file konfigurasi sistem yang penting seperti `/etc/hosts`, `/etc/resolv.conf`, `nsswitch.conf`, dll. Sebagian besar berisi konfigurasi host spesifik dan aplikasi.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.016.jpeg)
+#### `/home`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.017.jpeg)
+Semua direktori home pengguna berada di bawah direktori ini, kecuali direktori home root (`/root`). Direktori ini menyimpan file pengguna dan pengaturan pribadi seperti `.profile`, dll.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.018.jpeg)
+#### `/media`
 
-6. Partition Disk pilih yang manual untuk mengatur partisi sesuai ketentuan, dan ikuti saja langkah-langkah dibawah ini secara berurutan  
+Tempat umum untuk pemasangan media yang dapat dilepas seperti CD-ROM, USB, Floppy disk, dll.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.019.jpeg)
+#### `/mnt`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.020.jpeg)
+Tempat umum untuk pemasangan sistem file sementara. Biasanya digunakan saat melakukan troubleshooting dari CD-ROM atau untuk memasang sistem file root dan mengedit konfigurasi.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.021.jpeg)
+#### `/opt`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.022.jpeg)
+Direktori yang jarang digunakan untuk Paket Perangkat Lunak Opsional. Biasanya digunakan di sistem UNIX seperti Sun Solaris di mana paket perangkat lunak terinstal.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.023.jpeg)
+#### `/usr`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.024.jpeg)
+Sub-hierarki dari file sistem root yang berisi data pengguna. Berisi utilitas dan aplikasi pengguna yang spesifik. Ini termasuk direktori `bin`, `sbin`, dan `lib` yang berisi binary sistem dan pustaka yang terkait.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.025.jpeg)
+- `/usr/sbin`: Berisi binary sistem non-esensial dan non-kritis serta utilitas jaringan.
+- `/usr/bin`: Berisi binary perintah non-esensial dan non-kritis untuk pengguna.
+- `/usr/lib`: Berisi pustaka untuk binary yang ada di dalam direktori `/usr/bin` dan `/usr/sbin`.
+- `/usr/share`: Direktori data independen platform yang dibagi.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.026.jpeg)
+#### `/usr/local`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.027.jpeg)
+Sub-hierarki di bawah `/usr` yang berisi data sistem lokal khusus pengguna dan binary sistem serta pustakanya.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.028.jpeg)
+#### `/var`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.029.jpeg)
+Biasanya dipasang sebagai sistem file terpisah di bawah root, berisi konten variabel seperti log, file spool untuk printer, crontab, pekerjaan at, email, proses yang berjalan, file kunci, dll.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.030.jpeg)
+#### `/tmp`
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.031.jpeg)
+Sistem file sementara yang akan dibersihkan saat sistem reboot. Juga terdapat direktori `/var/tmp` yang berisi file sementara, namun dengan perlindungan saat reboot.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.032.jpeg)
+Selain itu, terdapat sistem file virtual (/proc) yang berada di dalam memori dan dipasang di bawah root, berisi informasi kernel dan statistik proses dalam format file teks.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.033.jpeg)
+![](images/tugas2/struktur_direktori_linux.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.034.jpeg)
+## 2. Buat slide dalam bahasa Indonesia dengan gaya bahasamu sendiri tentang dasar system administrasi ! Gunakan referensi buku : Debian12- SysAdmmin.pdf
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.035.jpeg)
+### PPT Tugas [Link PPT kami](https://drive.google.com/file/d/1Fo09IzTcDx9N-X00HargtwbsyEMdwz4X/view?usp=sharing)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.036.jpeg)
+## 3. Tugas tambahan, Mengubah IPv4 melalui Network Manager
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.037.jpeg)
+Mencoba kustomisasi IPv4 lewat Network Manager
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.038.jpeg)
+Cek gateway, IP, Interface dan netmask melalui bantuan “sudo route -n”
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.039.jpeg)
+![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.001.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.040.jpeg)
+Diketahui gateway 10.0.2.2 dan netmask /24 atau 255.255.255.0 dan
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.041.jpeg)
+nama device interfacenya adalah enp0s3
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.042.jpeg)
+- Ini dalam kondisi terhubung ke internet eepiswlan.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.043.jpeg)
+![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.002.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.044.jpeg)
+Ini default automatic IPv4 DHCP dan DNS automatic
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.045.jpeg)
+![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.003.png) ![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.004.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.046.jpeg)
+Masih terhubung ke internet
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.047.jpeg)
+![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.005.png)
 
-Ini merupakan hasil summary Manual Partition Disk 
+Lalu coba mengganti IPv4 dan DNS secara manual
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.048.jpeg)
+![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.006.png)
 
-7. Lanjut instalasi software dan package manager, ikuti saja langkah sesuai gambar dibawah ini 
+On/Off koneksi untuk refresh perubahan IP yang telah dilakukan
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.049.jpeg)
+![ref1]
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.050.jpeg)
+![ref2]
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.051.jpeg)
+![ref1]
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.052.jpeg)
+Setelah refresh, IPv4 dan DNS berhasil berubah![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.009.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.053.jpeg)
+Saat dicoba kembali dengan IP dan DNS baru, tidak dapat tersambung.![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.010.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.054.jpeg)
+- Sekarang coba terhubung internet hotspot pribadi.
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.055.jpeg)
+![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.011.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.056.jpeg)
+Dalam keaadaan default automatic![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.012.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.057.jpeg)
+![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.013.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.058.jpeg)
+Berhasil terhubung ke internet dengan setting IPv4 Default![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.014.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.059.jpeg)
+Lalu coba setting IPv4 Manual![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.015.png)
 
-8. Finisihing Instalasi 
+On/Off koneksi untuk refresh perubahan IP yang telah dilakukan
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.060.jpeg)
+![ref1]
 
-9. OS sudah berhasil terinstal, selanjutnya masuk ke akun dan konfigurasi didalamnya sesuaikan dengan preferensi anda. 
+![ref2]
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.061.jpeg)
+![ref1]
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.062.jpeg)
+Setelah refresh, IP berhasil diubah![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.016.png)
 
-10. Debian sudah siap digunakan! Enjoy.  
+Berhasil terhubung setelah dilakukan perubahan IP dan DNS dengan menggunakan hotspot pribadi![](images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.017.png)
 
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.063.jpeg)
-
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.064.jpeg)
-
-2. **Buat ringkasan tentang perbedaan dari Debian 12 (bookworm) dengan Debian 11 (bullseye) : versi kernel, kebutuhan sistem, penerapan systemd dan perbedaan packagenya (dalam bentuk tabel) !** 
-
-   [Chapter 2. What's new in Debian 12 ](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-whats-new.en.html)
-
-
-
-||**Debian 11** |**Debian 12** |
-| :- | - | - |
-|**Kernel version** |5\.1 |6\.1 |
-|**systemd** |247 |252 |
-|**System requirement** |` `256 MiB RAM and 400 MHz , For workstations, diskless workstations and standalone systems, 1500 MHz and 1024 MiB RAM. combined main server + LTSP server: 60 GiB (plus additional space for user accounts). |256 MiB RAM and 400 MHz , For workstations, diskless workstations and standalone systems, 1500 MHz and 1024 MiB RAM. combined main server + LTSP server + workstation (if a GUI on the server is desired): 60 GiB |
-|**Package** |Apache (2.4.54), bash (5.1), mariaDB (10.5), openJDK (11), Nginx(1.18), php (7.4), python 3 (3.9.2) |Apache (2.4.57), bash (5.2.15), mariaDB (10.11), openJDK (17), Nginx(1.22), php (8.2), python 3 (3.11.2) |
-
-3. **Jelaskan fungsi dari file "/etc/groups" beserta formatnya!** 
-
-   [11.7. Direktori LDAP (debian.org) ](https://www.debian.org/doc/manuals/debian-handbook/sect.ldap-directory.id.html)penjelasan 11.7.2 File yang menyimpan group yang ada di linux dan UNIX.  
-
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.065.png)
-
-**Format : group\_name:password:GID:user\_list** 
-
-4. **Jelaskan perbedaan penggunaan perintah "su" dengan "su -"!** 
-
-   Su dan su- adalah 2 metode berbeda yang digunakan untuk mengganti akun user.  
-
-   Su : ketika mengganti akun, enviroment variable dari user original. 
-
-   Su - : ketika mengganti akun, enviroment variable akan bersih. 
-
-   [Apa Perbedaan Antara su dan su - Command di Linux? (operavps.com) ](https://operavps.com/docs/su-vs-su-dash/)
-
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.066.png)
-
-5. **Jelaskan fungsi dari "sudo" !** 
-
-   [Bab 4. Kontrol akses dan autentikasi (debian.org) ](https://www.debian.org/doc/manuals/debian-reference/ch04.id.html#_sudo)
-
-   [Perbedaan Sudo Dengan Su Di Linux|D3 Teknik Komputer A.Md.Kom (stekom.ac.id) ](https://teknik-komputer-d3.stekom.ac.id/informasi/baca/Perbedaan-Sudo-Dengan-Su-Di-Linux/614465e4275228898db51d3e99ec840f22fc6aa1)
-
-   Sudo untuk sysAdmin memberikan akses root terbatas kepada user. Sudo bisa diakses user dengan memasukkan password milik user. 
-
-   Contoh saat tidak menggunakan sudo :  
-
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.067.png)
-
-Contoh saat menggunakan sudo :  
-
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.068.png)
-
-6. **Jelaskan langkah-langkah penambahan user anda sebagai user sudo ! Gunakan perintah "su -" lalu setelah masuk sebagai root, jalankan perintah "visudo". Tambahkan user anda di bawah user root pada bagian** 
-
-   **" # User privilege specification"** 
-
-   Sebelum user ditambahkan dibawah root :  
-
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.069.png)
-
-Proses menambahkan user di bawah root :  
-
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.070.png)
-
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.071.jpeg)
-
-![](images/Aspose.Words.42495487-067a-409b-93f0-897c3359bac3.072.jpeg)
+[ref1]: images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.007.png
+[ref2]: images/tugas2/Aspose.Words.022e2579-d343-4a48-9699-84e17aa61a6b.008.png
