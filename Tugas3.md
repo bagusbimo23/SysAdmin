@@ -194,4 +194,4 @@ Berhasil terkoneksi
 
 ` `SELESAI
 
-[ref1]: images/tugas3/Aspose.Words.3d8914c0-3b43-4fc2-85cb-8c852fe7c974.009.png
+[ref1]: Aspose.Words.3d8914c0-3b43-4fc2-85cb-8c852fe7c974.009.png
