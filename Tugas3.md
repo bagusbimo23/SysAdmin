@@ -16,6 +16,7 @@
 <hr>
 <hr>
 </div>
+
 **Gdebi**
 
 Intstall gdebi menggunakan apt
