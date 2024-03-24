@@ -19,13 +19,23 @@
 
 ## 1. Tugas Baca tentang Ekosistem Internet (Materi sudah diunggah di Ethol). Tuliskan pendapatmu tentang bagaimana Internet bekerja (tugas pribadi)!
 
-Dalam konteks Internet, yang menjadi tulang punggung interaksi global saat ini, perlu diperhatikan berbagai aspek teknis dan kebijakan yang membentuk ekosistemnya. Pertama, kita harus paham bahwa Internet terdiri dari dua bagian besar: sistem routing yang menentukan cara alamat-alamat (yang dikenal sebagai IP addresses) terhubung satu sama lain, dan sistem penamaan yang memberikan nama alias atau domain kepada alamat-alamat tersebut agar lebih mudah diingat. Keduanya merupakan fondasi yang penting, yang harus terus diperbaiki dan diperbarui oleh organisasi independen seperti IETF dan IEEE.
-
-Dalam menjelajahi internet, kita juga harus memahami tentang bagaimana alamat-alamat ini terhubung satu sama lain, seperti halnya jalan-jalan yang menghubungkan tempat-tempat di kota. Konsep seperti peering connection dan transit provider routing policy mengatur bagaimana paket data bergerak di internet, dengan tujuan agar pengaliran informasi menjadi lebih efisien dan cepat. Selain itu, ada juga konsep hot potato routing yang mirip dengan melemparkan kentang panas, di mana paket data diteruskan ke penyedia layanan lain sesegera mungkin.
-
-Di sisi lain, kita juga perlu memahami bagaimana nama-nama alias atau domain dikelola dan diterjemahkan ke alamat IP yang sebenarnya, melalui sistem seperti DNS (Domain Name System). Ada dua jenis DNS yang perlu diperhatikan: authoritative yang menangani alamat-alamat IP yang dikelolanya sendiri, dan non-authoritative yang memberikan jawaban atas alamat IP yang tidak dimilikinya. Semua ini diatur oleh lembaga-lembaga seperti ICANN dan IANA, yang bertanggung jawab atas regulasi dan distribusi alamat IP di internet.
-
-Selain aspek teknis, perlu juga diperhatikan aspek kebijakan yang mengatur penggunaan internet. Ini termasuk berbagai lembaga standarisasi seperti IETF, IEEE, W3C, dan ITU yang menetapkan standar untuk protokol, bahasa, dan enkripsi yang digunakan dalam internet. Selain itu, peran penyedia layanan seperti content provider, access provider, dan transit provider juga penting dalam menyediakan akses dan konten kepada pengguna internet. Terakhir, ada juga lembaga seperti clearing house yang mengatur pertukaran data dan transaksi di internet. Dengan memahami semua ini, kita bisa lebih baik mengelola dan memanfaatkan internet dengan efektif.
+Menurut saya, internet adalah  ekosistem berkelanjutan di mana berbagai entitas seperti penyedia konten, titik pertukaran Internet, dan gTLD/ccTLD (domain tingkat atas kode negara dan global) bekerja sama untuk mengoptimalkan perutean dan pengiriman konten.
+ Pendidikan dan pengembangan juga merupakan aspek penting dalam memahami cara kerja Internet.
+ Secara teknis, Internet diawali dengan proses penetapan domain oleh ICANN (Internet Corporation for Assigned Names and Numbers).
+ Proses ini dilakukan untuk domain berekstensi .id melalui perusahaan seperti PANDI di Indonesia.
+ Administrator DNS kemudian memetakan lokasi nama ke alamat IP.
+ Misalnya, ketika komputer menggunakan nama host, nama tersebut diterjemahkan ke alamat IP melalui router.
+ Sistem perutean memastikan bahwa informasi mencapai tujuannya melalui serangkaian router, masing-masing router memiliki alamat IP.
+ Ada dua jenis alamat IP: IPv4 dan IPv6.
+ Perutean juga mencakup konfigurasi kebijakan router dan protokol perutean.
+ Komunikasi antar ISP (Penyedia Layanan Internet) melibatkan koneksi peering yang menerapkan kebijakan penyedia-pelanggan, transit, dan pembayaran gratis.
+ Hal ini memengaruhi cara data ditransfer antar penyedia layanan dengan tujuan meminimalkan latensi dan memaksimalkan efisiensi.
+ Penyedia konten, seperti  penyedia layanan seperti Google dan YouTube, memiliki kebijakan peruteannya sendiri.
+ Mereka menggunakan strategi seperti caching untuk mempercepat akses ke konten dan meningkatkan kepuasan pengguna.
+ Sistem penamaan seperti DNS (Domain Name System) memungkinkan pengguna  mengakses situs web menggunakan nama domain, bukan alamat IP.
+ Ini adalah hierarki server DNS dan komponen seperti namespace, server nama, dan penyelesai.
+ Selain itu, organisasi standar  seperti Internet Engineering Task Force (IETF) bertanggung jawab atas standardisasi teknis dalam pengembangan Internet, yang mencakup protokol untuk transport lapisan 3  dan protokol lainnya.
+ Secara keseluruhan, Internet beroperasi sebagai ekosistem yang kompleks di mana berbagai entitas dan protokol bekerja sama untuk menyediakan konektivitas dan konten kepada pengguna.
 
 ## 2. Bagaimana Cara kerja dari iterative dan recursive dari DNS Query, ada 8 step, dari PC anda!
 
