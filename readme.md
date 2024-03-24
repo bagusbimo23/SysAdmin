@@ -1,4 +1,4 @@
-<h1 style="text-align:center;">Tugas Workshop Administrasi Jaringan <br>Kelompok 1 - Akmal Zidani Fikri - 3122500019</h1>
+<h1 style="text-align:center;">Tugas Workshop Administrasi Jaringan <br>Kelompok 1 - Bagus Bimo Prakoso - 3122500028</h1>
 
 ## List Tugas
 
