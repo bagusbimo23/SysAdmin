@@ -19,7 +19,7 @@
 
 # <a name="_5x87chy0x0vj"></a>**Web browser**
 
-![](Aspose.Words.524fd46e-fbdc-4882-b866-3d3385327f99.001.jpeg)
+![](images/tugas6/Aspose.Words.524fd46e-fbdc-4882-b866-3d3385327f99.001.jpeg)
 
 User interfaces
 
@@ -51,7 +51,7 @@ Browser memiliki storage yang bisa digunakan untuk menyimpan cookies, cache, dan
 
 # <a name="_x6rr40xrw2ou"></a>**Web Server**
 
-![](Aspose.Words.524fd46e-fbdc-4882-b866-3d3385327f99.002.jpeg)
+![](images/tugas6/Aspose.Words.524fd46e-fbdc-4882-b866-3d3385327f99.002.jpeg)
 
 Web Server
 

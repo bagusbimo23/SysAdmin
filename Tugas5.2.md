@@ -19,7 +19,7 @@
 
 # <a name="_heading=h.7yog8cndlxwc"></a>**ESMTP**
 
-![](Aspose.Words.25120c2a-01a3-4693-87b5-1a85255b62b9.001.png)
+![](images/tugas5.2/Aspose.Words.25120c2a-01a3-4693-87b5-1a85255b62b9.001.png)
 
 mencoba untuk terhubung ke alamat IP 192.168.1.10 melalui protokol Telnet pada port 25. Port 25 adalah port default yang digunakan untuk layanan SMTP (Simple Mail Transfer Protocol), yang digunakan untuk mengirim email. Jadi, perintah tersebut mencoba untuk terhubung ke server email yang mungkin berjalan di alamat IP tersebut.
 
@@ -31,9 +31,9 @@ Perintah "RCPT TO": Perintah ini digunakan oleh pengirim email (klien) untuk men
 
 # <a name="_heading=h.rou08oqd6mzj"></a>**POP3**
 
-![](Aspose.Words.25120c2a-01a3-4693-87b5-1a85255b62b9.002.png)
+![](images/tugas5.2/Aspose.Words.25120c2a-01a3-4693-87b5-1a85255b62b9.002.png)
 
-![](Aspose.Words.25120c2a-01a3-4693-87b5-1a85255b62b9.003.png)
+![](images/tugas5.2/Aspose.Words.25120c2a-01a3-4693-87b5-1a85255b62b9.003.png)
 
 Port 110 adalah port default yang digunakan untuk layanan POP3 (Post Office Protocol version 3). POP3 adalah protokol yang digunakan untuk mengambil email dari server email ke komputer klien.
 
