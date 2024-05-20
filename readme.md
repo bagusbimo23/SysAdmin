@@ -10,5 +10,6 @@
 - Tugas 5.1 : [Click Here](https://github.com/bagusbimo23/SysAdmin-3122500028/blob/main/Tugas5.1.md)
 - Tugas 5.2 : [Click Here](https://github.com/bagusbimo23/SysAdmin-3122500028/blob/main/Tugas5.2.md)
 - Tugas 6 : [Click Here](https://github.com/bagusbimo23/SysAdmin-3122500028/blob/main/Tugas6.md)
+- Tugas 7 : [Click Here](https://github.com/bagusbimo23/SysAdmin-3122500028/blob/main/Tugas7.md)
 
 ##
